@@ -7,10 +7,17 @@ end
 
 
 post '/contact' do
+
+	message = params["message"]
+	email = params["email"]
+	subject = params["subject"]
+	company = params["company"]
+	name = params["name"]
+
 	Pony.mail({
 	  :to => ENV['gmail_username'],
 		:subject							=> 'Contact Form Maginto Partners',
-    :body 								=> 'Hello you sexy thing 4:).',
+    :body 								=> {name: name, message: message, email: email, subject: subject, company: company, name: name},
 	  :via => :smtp,
 	  :via_options => {
 	    :address              => 'smtp.gmail.com',
