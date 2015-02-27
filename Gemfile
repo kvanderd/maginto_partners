@@ -21,6 +21,9 @@ gem 'shotgun'
 group :test do
   gem 'faker'
   gem 'rspec'
+  gem 'byebug'
 end
 
 gem 'unicorn'
+
+gem 'pony'
