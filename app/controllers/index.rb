@@ -10,7 +10,7 @@ post '/contact' do
 	Pony.mail({
 	  :to => ENV['gmail_username'],
 		:subject							=> 'Contact Form Maginto Partners',
-    :body 								=> 'Hello you sexy thing :).',
+    :body 								=> 'Hello you sexy thing 4:).',
 	  :via => :smtp,
 	  :via_options => {
 	    :address              => 'smtp.gmail.com',
